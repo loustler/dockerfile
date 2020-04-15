@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      ‐ name: build-push
-        uses: docker/build-push-action@v1
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1.0.1
         env:
           INPUT_DOCKERFILE: jekyll/
         with:
