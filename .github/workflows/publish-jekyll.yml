@@ -15,6 +15,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Get version
+        id: get_version
+        uses: battila7/get-version-action@v2
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -31,7 +34,7 @@ jobs:
           push: true
           tags: |
             loustler/jekyll:latest
-            loustler/jekyll:${{ github.ref }}
+            loustler/jekyll:${{ steps.get_version.outputs.version }}
           tag_with_ref: true
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
