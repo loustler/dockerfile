@@ -1,4 +1,6 @@
-FROM ruby:2.7
+ARG VERSION=2.7
+
+FROM ruby:$VERSION
 
 LABEL maintainer="dev.loustler@gmail.com"
 
