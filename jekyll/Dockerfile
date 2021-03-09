@@ -1,6 +1,6 @@
 ARG VERSION=2.7
 
-FROM ruby:VERSION
+FROM ruby:$VERSION
 
 LABEL maintainer="dev.loustler@gmail.com"
 
