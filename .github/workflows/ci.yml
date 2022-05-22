@@ -8,6 +8,11 @@ on:
       - "**/*.Docker"
       - "**/*.dockerfile"
   pull_request:
+    branches:
+      - master
+    paths:
+      - "**/*.Docker"
+      - "**/*.dockerfile"
 
 jobs:
   ci:
