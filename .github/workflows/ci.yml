@@ -3,13 +3,13 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "**/*.Docker"
       - "**/*.dockerfile"
   pull_request:
     branches:
-      - master
+      - main
     paths:
       - "**/*.Docker"
       - "**/*.dockerfile"
