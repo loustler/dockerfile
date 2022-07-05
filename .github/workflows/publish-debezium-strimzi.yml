@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'debezium/strimzi/**'
+      - '.github/workflows/publish-debezium-strimzi.yml'
 
 jobs:
   build:
