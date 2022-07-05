@@ -14,8 +14,8 @@ jobs:
     timeout-minutes: 10
     strategy:
       matrix:
-        VERSION: [ "0.28.0-kafka-3.1.0", "0.29.0-kafka-3.1.1" ]
-        DEBEZIUM_VERSION: [ "1.9.4.Final" ]
+        strimzi: [ "0.28.0-kafka-3.1.0", "0.29.0-kafka-3.1.1" ]
+        debezium: [ "1.9.4.Final" ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -33,7 +33,10 @@ jobs:
         with:
           context: ./debezium/strimzi
           push: true
-          tags: loustler/debezium-strimzi:${{ matrix.VERSION }}_${{ matrix.DEBEZIUM_VERSION }}
+          tags: loustler/debezium-strimzi:${{ matrix.strimzi }}_${{ matrix.debezium }}
           tag_with_ref: true
+          build-args: |
+            VERSION=${{ matrix.strimzi }}
+            DEBEZIUM_VERSION=${{ matrix.debezium }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
