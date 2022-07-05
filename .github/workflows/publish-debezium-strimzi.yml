@@ -2,6 +2,8 @@ name: Debezium Strimzi
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'debezium/strimzi/**'
 
