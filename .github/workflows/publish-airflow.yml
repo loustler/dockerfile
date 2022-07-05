@@ -6,7 +6,6 @@ on:
       - 'airflow-*'
     paths:
       - 'airflow/**'
-      - '.github/workflows/publish-debezium-strimzi.yml'
 
 jobs:
   build:
