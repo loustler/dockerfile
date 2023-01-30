@@ -36,7 +36,7 @@ jobs:
 
           echo "::set-output name=tag::$tag_"
       - name: Build and push Docker images
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: ./jekyll
           push: true
