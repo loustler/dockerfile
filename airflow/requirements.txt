@@ -1,6 +1,6 @@
 apache-airflow-providers-amazon
 apache-airflow-providers-apache-hive
-apache-airflow-providers-apache-spark==1.0.1
+apache-airflow-providers-apache-spark==4.0.1
 apache-airflow-providers-cncf-kubernetes
 apache-airflow-providers-datadog
 apache-airflow-providers-facebook
